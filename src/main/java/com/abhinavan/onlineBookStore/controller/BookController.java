@@ -29,6 +29,12 @@ public class BookController
         return ResponseEntity.ok(manageBookService.getAllBooks());
     }
 
+    @GetMapping("/getBookByName/{name}")
+    public ResponseEntity<Book> getBookByName(@PathVariable String name)
+    {
+        return ResponseEntity.ok(manageBookService.getBookByName(name));
+    }
+
     @DeleteMapping("/removeBooksByName/{name}")
     public ResponseEntity<Book> removeBooksByName(@PathVariable String name)
     {

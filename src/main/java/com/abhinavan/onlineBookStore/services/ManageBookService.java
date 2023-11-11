@@ -43,4 +43,9 @@ public class ManageBookService
         bookRepository.updateBookQuantity(name,newQuantity);
         return bookRepository.findByName(name);
     }
+
+    public Book getBookByName(String name)
+    {
+        return bookRepository.findByName(name);
+    }
 }
